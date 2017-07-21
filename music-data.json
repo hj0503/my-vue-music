@@ -1,0 +1,44 @@
+{
+  "musicData": [
+    {
+      "name": "岑宁儿 - 追光者",
+      "src": "http://ws.stream.qqmusic.qq.com/202773258.m4a?fromtag=46",
+      "musicImgSrc": "http://p4.music.126.net/lDyytkTaPYVTb1Vpide6AA==/18591642115187138.jpg"
+    },
+    {
+      "name": "何洁 - 请不要对我说sorry",
+      "src": "http://ws.stream.qqmusic.qq.com/1913515.m4a?fromtag=46",
+      "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E6%B0%91%E8%B0%A3.jpg"
+    },
+    {
+      "name": "林俊杰 - 她说",
+      "src": "http://ws.stream.qqmusic.qq.com/102415346.m4a?fromtag=46",
+      "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E6%88%91%E8%A6%81%E4%BD%A0.jpg"
+    },
+    {
+      "name": "赵雷 - 成都",
+      "src":"http://m2.music.126.net/7o5D4dA6271VktgawcbZFA==/18665309393829604.mp3",
+      "musicImgSrc": "http://p4.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg"
+    },
+    {
+      "name": "碧昂斯 - halo",
+      "src":"http://ws.stream.qqmusic.qq.com/449501.m4a?fromtag=46",
+      "musicImgSrc": "http://p3.music.126.net/U9RoJy0AUsoYuaKjmJbAzQ==/3386495814257685.jpg"
+    },
+    {
+      "name": "Taylor Swift - I Knew You Were Trouble",
+      "src": "http://ws.stream.qqmusic.qq.com/2480405.m4a?fromtag=46",
+      "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E6%9D%8E%E5%81%A5.jpg"
+    },
+    {
+      "name": "陈柏宇 - 你瞒我瞒",
+      "src": "http://ws.stream.qqmusic.qq.com/102388821.m4a?fromtag=46",
+      "musicImgSrc": "http://p3.music.126.net/9kZl6NRj3HxmQQ8DqTjZ4Q==/17729624997966923.jpg"
+    },
+    {
+      "name": "以冬 - 我的一个道姑朋友",
+      "src": "http://ws.stream.qqmusic.qq.com/200138786.m4a?fromtag=46",
+      "musicImgSrc": "http://omratag7g.bkt.clouddn.com/%E5%A4%8F%E6%B4%9B%E7%89%B9%E7%83%A6%E6%81%BC.jpg"
+    }
+  ]
+}
