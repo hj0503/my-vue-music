@@ -189,8 +189,7 @@ export default {
     width: 9.066667rem;
     height: 9.066667rem;
     border-radius: 50%;
-    margin-top: -4.533333rem;
-    margin-right: -4.533333rem;
+    transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2;
