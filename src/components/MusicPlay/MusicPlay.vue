@@ -186,11 +186,11 @@ export default {
     position: fixed;
     top: 50%;
     right: 50%;
-    width: 360px;
-    height: 360px;
+    width: 9.066667rem;
+    height: 9.066667rem;
     border-radius: 50%;
-    margin-top: -180px;
-    margin-right: -180px;
+    margin-top: -4.533333rem;
+    margin-right: -4.533333rem;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 2;
