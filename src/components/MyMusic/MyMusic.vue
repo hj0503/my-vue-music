@@ -51,6 +51,9 @@ export default {
     },
     deleteMusic(index) {
       this.musicData.splice(index,1)
+      if(this.audio.index === index) {
+        this.$store.commit('delMusicIndex')
+      }
     },
     toTop(index) {
       this.musicData.unshift(this.musicData.splice(index,1)[0]);

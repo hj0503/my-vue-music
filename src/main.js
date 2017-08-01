@@ -23,6 +23,8 @@ const store = new Vuex.Store({
     startTime: '',
     endTime: '',
     historyList: [],
+    rankNewMusic: [],
+    rankAllMusic: [],
   	DOM: {},
     audio: {
       name: '',
@@ -88,6 +90,9 @@ const store = new Vuex.Store({
         state.audio.index = index;
       }
     },
+    delMusicIndex(state) {
+      state.audio.index = -1
+    },
     getData(state) {
       return new Promise((resolve, reject) => {
         axios.get('https://www.easy-mock.com/mock/5902e9be7a878d73716dfc00/members/music-data-list') 
@@ -104,6 +109,14 @@ const store = new Vuex.Store({
             });
         resolve();
       });
+    },
+    getRankNew(state) {
+      return new Promise((resolve, reject) => {
+        axios.get('api/newRank')
+          .then(res => {
+            state.rankNewMusic = JSON.stringify(data)
+          })
+      })
     },
     getLrc(state) {
       axios.get('/api/lyric')

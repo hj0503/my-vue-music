@@ -59,6 +59,7 @@ export default {
   mounted () {
       this.$store.commit('resetHistory', JSON.parse(localStorage.getItem('historyList')) || [])
       this.history = JSON.parse(localStorage.getItem('historyList')) || []
+      this.$refs.input.focus()
   },
   filters:{
     filSong:function(value){

@@ -1,6 +1,7 @@
 <template lang="html">
   <transition name="fadeIn">
     <div class="play" :style="{backgroundImage: 'url(' + audio.musicImgSrc + ')'}">
+      <div class="ybg" :class="{active : isPlaying}" :style="{backgroundImage: 'url(' + audio.musicImgSrc + ')'}"></div>
       <div class="mask"></div>
       <div class="title">
         <div class="back" @click="isShowMusicPlay">
@@ -50,7 +51,7 @@
                 <span class="singer">{{music.name.split('-')[0]}}</span>
               </div>
               <div class="right">
-                <i class="iconfont icon-chuyidong">&#xe617;</i>
+                <i @click.stop="delMusic(index)" class="iconfont icon-chuyidong">&#xe617;</i>
               </div>
             </div>
           </div>
@@ -145,6 +146,12 @@ export default {
       this.$store.commit('play', true);
       this.DOM.audio.play()
     },
+    delMusic(index) {
+      this.musicData.splice(index,1)
+      if(this.audio.index === index) {
+        this.$store.commit('delMusicIndex')
+      }
+    }
   }
 }
 </script>
@@ -175,13 +182,31 @@ export default {
   color: #ffffff;
   padding: 0.533333rem;
   font-size: 0.32rem;
+  .ybg{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    margin-top: -180px;
+    margin-right: -180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    animation: rotateDiv 8s linear infinite;
+    animation-play-state: paused;
+    &.active{
+      animation-play-state: running;
+    }
+  }
   .mask{
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,.6);
   }
   .ListMask{
     position: absolute;
@@ -412,5 +437,13 @@ export default {
 }
 .MaskIn-enter,.MaskIn-leave-active{
   opacity: 0
+}
+@keyframes rotateDiv{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 </style>

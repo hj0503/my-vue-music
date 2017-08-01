@@ -47,6 +47,51 @@ apiRoutes.get('/search/:num/:name', (req, res) => {
     })
 })
 
+apiRoutes.get('/newRank', (req, res) => {
+  function search() {
+    return new Promise((resolve, reject) => {
+      let rankResult = '';
+      let url = 'http://music.qq.com/musicbox/shop/v3/data/hit/hit_newsong.js';
+      http.get(url, response => {
+        response.on('data', data => {
+          rankResult += data;
+        });
+        response.on('end', () => {
+          resolve(rankResult);
+        })
+      })
+    })
+  }
+  search()
+    .then(rankResult => {
+      // console.log(rankResult)
+      // res.json(JSON.stringify(rankResult));
+      res.json(rankResult)
+      console.log(JSON.stringify(rankResult))
+    })
+})
+
+apiRoutes.get('/allRank', (req, res) => {
+  function search() {
+    return new Promise((resolve, reject) => {
+      let rankResult = '';
+      let url = 'http://music.qq.com/musicbox/shop/v3/data/hit/hit_all.js';
+      http.get(url, response => {
+        response.on('data', data => {
+          rankResult += data;
+        });
+        response.on('end', () => {
+          resolve(rankResult);
+        })
+      })
+    })
+  }
+  search()
+    .then(rankResult => {
+      res.json(JSON.parse(rankResult));
+    })
+})
+
 apiRoutes.get('/lyric', (req, res) => {
   function showLrc() {
     return new Promise((resolve, reject) => {
