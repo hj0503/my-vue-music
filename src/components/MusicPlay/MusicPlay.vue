@@ -145,6 +145,7 @@ export default {
       this.$store.commit('toggleMusic', index);
       this.$store.commit('play', true);
       this.DOM.audio.play()
+      console.log('hj')
     },
     delMusic(index) {
       this.musicData.splice(index,1)
