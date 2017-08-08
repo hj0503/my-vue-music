@@ -173,8 +173,6 @@ export default {
 .play{
   width: 100%;
   height: 100vh;
-  position: absolute;
-  top: 0;
   background-image: url(http://imgcache.qq.com/music/photo/album_300/28/300_albumpic_33328_0.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,11 +186,12 @@ export default {
     right: 50%;
     width: 9.066667rem;
     height: 9.066667rem;
+    margin-top: -4.533333rem;
+    margin-right: -4.533333rem;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2;
+    z-index: 3;
     animation: rotateDiv 8s linear infinite;
     animation-play-state: paused;
     &.active{
